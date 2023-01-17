@@ -1,16 +1,5 @@
 # Vet clinic database
 
-A vet clinic database is a tutorial for using a relational database to organize and manage data for a veterinary clinic, including creating tables for animal information, inserting sample data, and querying the tables to retrieve and display the information.
-
-
-## Getting Started
-
-This repository includes files with plain SQL that can be used to recreate a database:
-
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
-
 <a name="readme-top"></a>
 
 <!--
