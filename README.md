@@ -163,7 +163,7 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Mujeeb ur Rahman**
 
 - GitHub: [@Mujeeb](https://github.com/Mujeeb4582)
 - Twitter: [@Mujeeb](https://twitter.com/Mujeebu93992980)
