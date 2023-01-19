@@ -10,3 +10,10 @@ CREATE TABLE animals (
 );
 
 ALTER TABLE animals ADD COLUMN species VARCHAR(50);
+
+--- Create owners table
+CREATE TABLE owners (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100),
+    age INT  
+);
