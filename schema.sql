@@ -17,3 +17,9 @@ CREATE TABLE owners (
     full_name VARCHAR(100),
     age INT  
 );
+
+--- Create the species table
+CREATE TABLE species (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100)
+);
