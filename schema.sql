@@ -13,13 +13,13 @@ ALTER TABLE animals ADD COLUMN species VARCHAR(50);
 
 --- Create owners table
 CREATE TABLE owners (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     full_name VARCHAR(100),
     age INT  
 );
 
 --- Create the species table
 CREATE TABLE species (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR(100)
 );
