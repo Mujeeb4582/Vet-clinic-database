@@ -40,10 +40,18 @@ CREATE TABLE vets (
     date_of_graduation DATE NOT NULL
 );
 
--- Create the specializations table to relete the vet and species tables
+-- Create the specializations table to relate the vet and species tables
 CREATE TABLE specializations (
     id SERIAL PRIMARY KEY,
     vet_id INTEGER REFERENCES vets(id) ON UPDATE CASCADE ON DELETE CASCADE,
     species_id INTEGER REFERENCES species(id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+-- Create the visits table to relate the vet and animals tables
+CREATE TABLE visits (
+    id SERIAL PRIMARY KEY,
+    animal_id INTEGER REFERENCES animals(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    vet_id INTEGER REFERENCES vets(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    visit_date DATE NOT NULL
 );
 
