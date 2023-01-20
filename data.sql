@@ -55,3 +55,23 @@ SET species_id = (
     )
 );
 
+-- Update the animals table with owner_id information
+UPDATE animals 
+SET owner_id = (
+    SELECT id 
+    FROM owners 
+    WHERE full_name = (
+        CASE animals.name 
+            WHEN 'Agumon' THEN 'Sam Smith' 
+            WHEN 'Gabumon' THEN 'Jennifer Orwell' 
+            WHEN 'Pikachu' THEN 'Jennifer Orwell' 
+            WHEN 'Devimon' THEN 'Bob' 
+            WHEN 'Plantmon' THEN 'Bob' 
+            WHEN 'Charmander' THEN 'Melody Pond' 
+            WHEN 'Squirtle' THEN 'Melody Pond' 
+            WHEN 'Blossom' THEN 'Melody Pond' 
+            WHEN 'Angemon' THEN 'Dean Winchester' 
+            WHEN 'Boarmon' THEN 'Dean Winchester' 
+        END
+    )
+);
