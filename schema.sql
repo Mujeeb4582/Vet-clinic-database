@@ -31,3 +31,11 @@ ADD COLUMN species_id INT,
 ADD COLUMN owner_id INT,
 ADD FOREIGN KEY (species_id) REFERENCES species(id),
 ADD FOREIGN KEY (owner_id) REFERENCES owners(id);
+
+-- Create the vets table 
+CREATE TABLE vets (
+    id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    age INTEGER NOT NULL,
+    date_of_graduation DATE NOT NULL
+);
