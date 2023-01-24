@@ -81,3 +81,16 @@ CREATE TABLE invoice_items (
   invoice_id INTEGER NOT NULL REFERENCES invoice(id) ON UPDATE CASCADE,
   treatment_id INTEGER NOT NULL REFERENCES treatments(id) ON UPDATE CASCADE
 );
+-- Create the medical_treatment_histories table for many to many relationship
+CREATE TABLE medical_treatment_histories (
+  medical_history_id INT REFERENCES medical_histories(id) ON UPDATE CASCADE,
+  treatment_id INT REFERENCES treatments(id) ON UPDATE CASCADE
+);
+
+-- Create Indexes on tables:
+CREATE INDEX ON medical_histories (patient_id);
+CREATE INDEX ON invoices (medical_history_id);
+CREATE INDEX ON invoices_items (invoice_id);
+CREATE INDEX ON invoices_items (treatment_id);
+CREATE INDEX ON medical_treatment_histories (medical_history_id);
+CREATE INDEX ON medical_treatment_histories (treatment_id);
