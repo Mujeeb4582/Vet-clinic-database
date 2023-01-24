@@ -55,3 +55,13 @@ CREATE TABLE visits (
     visit_date DATE NOT NULL
 );
 
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Creating indexes
+-- SELECT COUNT(*) FROM visits where animal_id = 4;
+CREATE INDEX visits_animal_id_asc ON visits(animal_id ASC);
+-- SELECT * FROM visits where vet_id = 2;
+CREATE INDEX visits_vet_id ON visits(vet_id);
+-- SELECT * FROM owners where email = 'owner_18327@mail.com';
+CREATE INDEX owners_email_id ON owners(email);
