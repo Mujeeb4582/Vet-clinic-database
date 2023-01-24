@@ -65,3 +65,20 @@ CREATE INDEX visits_animal_id_asc ON visits(animal_id ASC);
 CREATE INDEX visits_vet_id ON visits(vet_id);
 -- SELECT * FROM owners where email = 'owner_18327@mail.com';
 CREATE INDEX owners_email_id ON owners(email);
+
+-- Create the treatments table
+CREATE TABLE treatments (
+  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  type VARCHAR(100) NOT NULL,
+  name VARCHAR(100) NOT NULL
+);
+
+-- Create the invoice_items table
+CREATE TABLE invoice_items (
+  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  unit_price DECIMAL(10,2) NOT NULL,
+  quantity INTEGER NOT NULL,
+  total_price DECIMAL(10,2) NOT NULL,
+  invoice_id INTEGER NOT NULL REFERENCES invoice(id) ON UPDATE CASCADE,
+  treatment_id INTEGER NOT NULL REFERENCES treatments(id) ON UPDATE CASCADE
+);
