@@ -72,7 +72,6 @@ CREATE TABLE treatments (
   type VARCHAR(100) NOT NULL,
   name VARCHAR(100) NOT NULL
 );
-
 -- Create the invoice_items table
 CREATE TABLE invoice_items (
   id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
