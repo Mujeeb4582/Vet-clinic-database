@@ -57,3 +57,7 @@ CREATE TABLE visits (
 
 -- Add an email column to your owners table
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Creating indexes
+-- SELECT COUNT(*) FROM visits where animal_id = 4;
+CREATE INDEX visits_animal_id_asc ON visits(animal_id ASC);
