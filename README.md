@@ -204,6 +204,7 @@ If you like this project give a Star⭐️.
 
 - Thanks to the Microverse team for the great curriculum.
 - Thanks to the Code Reviewer(s) for the insightful feedback.
+- Thanks to the my coding partner for great contribution
 - Hat tip to anyone whose code was used.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
